@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block book %}
+<div class="container mt-5">
+    <h1>Основная страница сайта</h1>
+    <form method="post">
+        <input type="text" name="Author" id="Author" class="form-control" placeholder="Введите автора"><br>
+        <textarea name="Name" id="Name" class="form-control" placeholder="Введите название книги"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Сохранить">
+    </form>
+</div>
+{% endblock %}

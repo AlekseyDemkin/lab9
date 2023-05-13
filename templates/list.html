@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все прочитанные книги
+{% endblock %}
+
+{% block book %}
+<div class="container mt-5">
+    <h1>Список прочитанных книг</h1>
+    {% for el in books %}
+    <div class="alert alert-info">
+        <h2>Автор: {{el.Author}}</h2>
+        <p>Название: <i>{{el.Name}}</i></p>
+        <p>Дата добавления: {{el.Date.date()}}</p>
+    </div>
+    {% endfor %}
+    <form action="/clear" method="post">
+        <input type="submit" class="btn btn-success" value="Очистить список">
+    </form>
+</div>
+{% endblock %}
